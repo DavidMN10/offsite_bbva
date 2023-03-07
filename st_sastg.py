@@ -83,7 +83,7 @@ def main():
         fig = px.pie(df2,values='values', names='names',title='Cantidad de Gigabytes (GB) ocupado en el SASSTG')
         fig.update_traces(textinfo='percent+label')
 
-    if chart_type == "Frecuencia_nombres":
+    elif chart_type == "Frecuencia_nombres":
         fig = px.bar(df, y='espacio', x='nombres', text='espacio', color='nombres', title='Cantidad de Gigabytes (GB) ocupados por colaborador en el SASSTG')
         fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
         fig.update_xaxes(categoryorder='total ascending')
